@@ -1,61 +1,23 @@
 import React from "react";
 import './app.css'
 import InitialValues from './InitialValues'
+import PreparePayload from './PreparePayload'
+import RequiredFields from './RequiredFields'
 import Fields from './Fields'
+import CreateIndex from './CreateIndex'
+import resource from './resource'
+import FormIndex from './FormIndex'
 
-const fields = [
-  {
-    inputType: 'text',
-    cols: 'xs={12}',
-    type: 'text',
-    name: 'name',
-    label: 'Name',
-    validations: '[presence(), name()]',
-  },
-  {
-    inputType: 'text',
-    cols: 'xs={12} sm={6}',
-    type: 'text',
-    name: 'email',
-    label: 'Email',
-    validations: '[presence(), email()]',
-  },
-  {
-    inputType: 'text',
-    cols: 'xs={12} sm={6}',
-    type: 'text',
-    name: 'phone',
-    label: 'Phone Number',
-    validations: '[presence(), phone()]',
-  },
-  {
-    inputType: 'date',
-    cols: 'xs={12} sm={6}',
-    type: 'raw',
-    name: 'date',
-    label: 'Birth Date',
-    validations: '[presence(), phone()]',
-  },
-  {
-    inputType: 'select',
-    cols: 'xs={12} sm={6}',
-    type: 'text',
-    name: 'shape',
-    label: 'Diamond Shape',
-    validations: '[presence()]',
-    options:[
-      { label: 'RB', value: 'round' },
-      { label: 'CB', value: 'cushion_brilliant' },
-      { label: 'CMB', value: 'cushion_modified_brilliant' }
-    ]
-  },
-]
 
 function App() {
   return (
     <>
-      <Fields fields={fields}/>
-      <InitialValues fields={fields}/>
+      {/* <FormIndex resource={resource}/>
+      <Fields fields={resource.fields}/>
+      <RequiredFields fields={resource.fields}/> */}
+      <PreparePayload fields={resource.fields}/>
+      {/* <CreateIndex resource={resource}/>
+      <InitialValues fields={resource.fields}/> */}
     </>
   );
 }
