@@ -12,12 +12,12 @@ import FormIndex from './FormIndex'
 function App() {
   return (
     <>
-      {/* <FormIndex resource={resource}/>
+      <FormIndex resource={resource}/>
       <Fields fields={resource.fields}/>
-      <RequiredFields fields={resource.fields}/> */}
+      <RequiredFields fields={resource.fields}/>
       <PreparePayload fields={resource.fields}/>
-      {/* <CreateIndex resource={resource}/>
-      <InitialValues fields={resource.fields}/> */}
+      <CreateIndex resource={resource}/>
+      <InitialValues fields={resource.fields}/>
     </>
   );
 }

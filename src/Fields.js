@@ -40,6 +40,36 @@ const date = rows => ({ cols, type, name, label, validations}) => rows.push(`
   </Row>
 `)
 
+const fileBody = rows => `
+import React from 'react'
+import { makeStyles } from '@material-ui/core'
+
+import { presence, validateNumber } from 'forms/validations'
+
+import { Row, GridItem } from 'ui/grid'
+
+const useStyles = makeStyles(theme => ({
+  row: {
+    marginBottom: theme.spacing(1),
+  },
+}))
+
+const Fields = ({ fields }) => {
+  const classes = useStyles()
+
+  return (
+    <React.Fragment>
+      ${rows.join('\n')}
+    </React.Fragment>
+  )
+}
+
+Fields.displayName = 'Fields'
+
+export default Fields
+
+`
+
 const Fields = ({fields}) => {
   let rows = []
 
@@ -66,7 +96,7 @@ const Fields = ({fields}) => {
     <>
       <h1>form/Fields.js</h1>
       <pre>
-        {rows.join('\n')}
+        {fileBody(rows)}
       </pre>
     </>
   );

@@ -26,8 +26,16 @@ const fields = [
     inputType: 'date',
     cols: 'xs={12} sm={6}',
     type: 'raw',
-    name: 'date',
+    name: 'birthDate',
     label: 'Birth Date',
+    validations: '[presence()]',
+  },
+  {
+    inputType: 'date',
+    cols: 'xs={12} sm={6}',
+    type: 'raw',
+    name: 'createdAt',
+    label: 'Created At',
     validations: '[presence()]',
   },
   {
