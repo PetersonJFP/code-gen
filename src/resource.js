@@ -3,24 +3,25 @@ const fields = [
     inputType: 'text',
     cols: 'xs={12}',
     type: 'text',
-    name: 'name',
-    label: 'Name',
-    validations: '[presence(), name()]',
+    name: 'firstName',
+    label: 'First Name',
+    validations: '[presence()]',
   },
   {
     inputType: 'text',
-    cols: 'xs={12} sm={6}',
+    cols: 'xs={12}',
     type: 'text',
-    name: 'email',
-    label: 'Email',
-    validations: '[presence(), email()]',
+    name: 'lastName',
+    label: 'Last Name',
+    validations: '[presence()]',
   },
   {
     inputType: 'text',
-    cols: 'xs={12} sm={6}',
+    cols: 'xs={12}',
     type: 'text',
     name: 'phone',
-    label: 'Phone Number',
+    label: 'Phone',
+    validations: '[presence()]',
   },
   {
     inputType: 'date',
@@ -34,8 +35,8 @@ const fields = [
     inputType: 'date',
     cols: 'xs={12} sm={6}',
     type: 'raw',
-    name: 'createdAt',
-    label: 'Created At',
+    name: 'firstKissDate',
+    label: 'First Kiss',
     validations: '[presence()]',
   },
   {
@@ -54,8 +55,7 @@ const fields = [
 ]
 
 const resource = {
-  name: 'curations',
-  path: '/offers',
+  name: 'users',
   fields: fields,
 }
 

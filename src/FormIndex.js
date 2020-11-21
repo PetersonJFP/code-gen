@@ -8,7 +8,7 @@ import { makeStyles, Typography } from '@material-ui/core'
 import SubmitButton from 'forms/SubmitButton'
 import useForm from 'utils/hooks/useForm'
 import FormError from 'forms/FormError'
-import { Wrapper, Row } from 'ui'
+import { Wrapper, Row } from 'ui/grid'
 
 import requiredFields from './requiredFields'
 import preparePayload from './preparePayload'
