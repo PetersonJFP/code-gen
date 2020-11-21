@@ -1,7 +1,7 @@
 import React from 'react'
 
 const genFields = ({type, name, validations}) => 
-  `{...rows('${type}', '${name}'${validations ? `, ${validations}` : ''})}`
+  `{...fields('${type}', '${name}'${validations ? `, ${validations}` : ''})}`
 
 const input = rows => ({ cols, type, name, label, validations}) => rows.push(`
   <Row className={classes.row}>
