@@ -44,7 +44,7 @@ const Form = ({ saveError, saving, onSubmit, initialValues }) => {
       <form onSubmit={handleSubmit}>
         <Wrapper>
           <Row className={classes.title}>
-            <Typography variant="h2">Create new ${resource.name}</Typography>
+            <Typography variant="h2">Create new ${resource.singularName}</Typography>
           </Row>
 
           <Fields fields={fields} formState={formState} />

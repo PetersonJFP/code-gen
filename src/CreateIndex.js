@@ -17,7 +17,7 @@ const Create = () => {
     name: '${resource.name}',${resource.path ? `\n    path: '${resource.path}',` : ''}
     afterSuccess: () => {
       navigate('/${resource.name}'))
-      success('${capitalize(resource.name)} created successfully')
+      success('${capitalize(resource.singularName)} created successfully')
     },
   })
 

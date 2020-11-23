@@ -56,6 +56,7 @@ const fields = [
 
 const resource = {
   name: 'users',
+  singularName: 'user',
   fields: fields,
 }
 
