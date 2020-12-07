@@ -37,7 +37,7 @@ describe('when component is mounted', () => {
 const FormIndexTest = ({fields}) => {
   return (
     <>
-      <h1>form/__tests__/index.js</h1>
+      <h1>form/__tests__/index.test.js</h1>
       <pre>
         {fileBody(fields)}
       </pre>

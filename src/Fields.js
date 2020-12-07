@@ -17,14 +17,15 @@ const input = rows => ({ cols, type, name, label, validations}) => rows.push(`
 const select = rows => ({ cols, type, name, label, validations, options}) => rows.push(`
   <Row className={classes.row}>
     <GridItem ${cols}>
-      <Select
+      <Input
+        select
         label="${label}"
         ${genFields({type, name, validations})}
       >
         ${options.map(opt =>
           `<MenuItem value="${opt.value}">${opt.label}</MenuItem>`
         ).join('\n')}
-      </Select>
+      </Input>
     </GridItem> 
   </Row>
 `)
@@ -42,9 +43,10 @@ const date = rows => ({ cols, type, name, label, validations}) => rows.push(`
 
 const fileBody = rows => `
 import React from 'react'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, MenuItem } from '@material-ui/core'
 
 import { presence, validateNumber } from 'forms/validations'
+import Input from 'form/Input'
 
 import { Row, GridItem } from 'ui/grid'
 

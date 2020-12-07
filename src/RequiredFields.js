@@ -7,16 +7,16 @@ const RequiredFields = ({fields}) => {
   }
   
   const requiredFields = `
-    export default {
+    export default [
       ${compact(
         fields.map(field => { 
           if (isRequired(field)) {
-            return field.name + ','
+            return `"${field.name}",`
           }
           return null
         })
       ).join('\n')}
-    }
+    ]
   `
 
   return (

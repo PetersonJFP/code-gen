@@ -26,7 +26,7 @@ describe('when component is mounted', () => {
 const CreateIndexTest = () => {
   return (
     <>
-      <h1>create/__tests__/index.js</h1>
+      <h1>create/__tests__/index.test.js</h1>
       <pre>
         {fileBody}
       </pre>
