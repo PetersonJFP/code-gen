@@ -1,0 +1,9 @@
+[x] criar edit conforme exemplo em theclearcut-web/src/admin/curations/edit/ringProduction/index.js
+
+[x] criar getInitialValues conforme mesmo exemplo
+
+[ ] numbers e qualquer dado que não seja string precisam ser parseados no getInitialValues para string e no preparePayload para seu formato original para não terem problemas com incompatibilidades --- hj somente dados com type !== text recebe um prepare payload, pensar e implementar uma forma de criar um input type text com subtype number para que ele possa ser tratado de forma diferente
+
+[ ] datas precisam ser parseados no getInitialValues para obj do moment
+
+[ ] testes no preparePayload e getInitialProps considerando string, date e number

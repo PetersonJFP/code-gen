@@ -46,6 +46,7 @@ import React from 'react'
 import { makeStyles, MenuItem } from '@material-ui/core'
 
 import { presence, validateNumber } from 'forms/validations'
+import DateInput from 'forms/DateInput'
 import Input from 'form/Input'
 
 import { Row, GridItem } from 'ui/grid'

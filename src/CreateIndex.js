@@ -10,13 +10,13 @@ import { navigate } from '@reach/router'
 import initialValues from './initialValues'
 import Form from '../form'
 
-const Create = () => {
+const Create${capitalize(resource.singularName)} = () => {
   const { success } = useSnackbar()
 
   const [{ saving, saveError }, { save }] = useCroods({
     name: '${resource.name}',${resource.path ? `\n    path: '${resource.path}',` : ''}
     afterSuccess: () => {
-      navigate('/${resource.name}'))
+      navigate('/${resource.name}')
       success('${capitalize(resource.singularName)} created successfully')
     },
   })
@@ -31,7 +31,7 @@ const Create = () => {
   )
 }
 
-export default Create
+export default Create${capitalize(resource.singularName)}
 `
 
 const CreateIndex = ({resource}) => {

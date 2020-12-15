@@ -9,6 +9,8 @@ import resource from './resource'
 import FormIndex from './FormIndex'
 import CreateIndexTest from './CreateIndexTest'
 import FormIndexTest from './FormIndexTest'
+import EditIndex from './EditIndex'
+import GetInitialValues from './GetInitialValues'
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
     <>
       <CreateIndex resource={resource}/>
       <InitialValues fields={resource.fields}/>
+      <EditIndex resource={resource}/>
+      <GetInitialValues fields={resource.fields}/>
       <FormIndex resource={resource}/>
       <FormIndexTest fields={resource.fields}/>
       <Fields fields={resource.fields}/>

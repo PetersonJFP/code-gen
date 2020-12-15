@@ -1,5 +1,5 @@
 import React from 'react'
-import {compact} from 'lodash'
+import {camelCase, compact} from 'lodash'
 
 const fileBody = fields => {
   const needPrepare = compact(
@@ -16,7 +16,7 @@ const fileBody = fields => {
   const getNeedPrepareExtractList = () => {
     if (needPrepare.length) {
       return needPrepare.map(field => { 
-        return field.name
+        return camelCase(field.name)
       })
     }
     return []
@@ -26,7 +26,10 @@ const fileBody = fields => {
   const getFieldPreparation = field => {
     switch (field.inputType) {
       case 'date':
-        return `formatDate(${field.name}, 'YYYY-MM-DD')`
+        return `formatDate(${camelCase(field.name)}, 'YYYY-MM-DD')`
+
+      case 'number':
+        return `${camelCase(field.name)} ? parseFloat(${camelCase(field.name)}) : null,`
   
       default:
         return field.name
@@ -36,7 +39,7 @@ const fileBody = fields => {
   const getPreparedReturnList = () => {
     if (hasFieldsToPrepare) {
       return needPrepare.map(field => { 
-        return `${field.name}: ${getFieldPreparation(field)}`
+        return `${camelCase(field.name)}: ${getFieldPreparation(field)}`
       })
     }
     return []

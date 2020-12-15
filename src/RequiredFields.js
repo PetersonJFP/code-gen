@@ -1,5 +1,5 @@
 import React from 'react'
-import {compact} from 'lodash'
+import {camelCase, compact} from 'lodash'
 
 const RequiredFields = ({fields}) => {
   const isRequired = field => {
@@ -11,7 +11,7 @@ const RequiredFields = ({fields}) => {
       ${compact(
         fields.map(field => { 
           if (isRequired(field)) {
-            return `"${field.name}",`
+            return `"${camelCase(field.name)}",`
           }
           return null
         })

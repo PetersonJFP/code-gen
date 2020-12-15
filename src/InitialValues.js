@@ -1,4 +1,5 @@
 import React from 'react'
+import {camelCase} from 'lodash'
 
 const InitialValues = ({fields}) => {
   const getInitialValue = field => {
@@ -14,7 +15,7 @@ const InitialValues = ({fields}) => {
   const initialValues = `
     export default {
       ${fields.map(field => 
-        `${field.name} = ${getInitialValue(field)}`
+        `${camelCase(field.name)}: ${getInitialValue(field)},`
       ).join('\n')}
     }
   `
