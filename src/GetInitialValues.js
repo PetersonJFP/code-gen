@@ -7,6 +7,12 @@ const GetInitialValues = ({fields}) => {
       case 'date':
         return `${camelCase(field.name)} ? moment(${camelCase(field.name)}) : null`
 
+      case 'text':
+        if (field.subType === 'number') {
+          return `${camelCase(field.name)} ? String(${camelCase(field.name)}) : ''`
+        }
+        return `${camelCase(field.name)} || ''`
+
       case 'number':
         return `${camelCase(field.name)} ? String(${camelCase(field.name)}) : ''`
   

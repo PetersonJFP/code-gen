@@ -11,6 +11,7 @@ import CreateIndexTest from './CreateIndexTest'
 import FormIndexTest from './FormIndexTest'
 import EditIndex from './EditIndex'
 import GetInitialValues from './GetInitialValues'
+import PreparePayloadTest from './PreparePayloadTest'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Fields fields={resource.fields}/>
       <RequiredFields fields={resource.fields}/>
       <PreparePayload fields={resource.fields}/>
+      <PreparePayloadTest fields={resource.fields}/>
       <CreateIndexTest />
     </>
   );

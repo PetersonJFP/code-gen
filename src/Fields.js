@@ -1,7 +1,8 @@
+import { camelCase } from 'lodash'
 import React from 'react'
 
 const genFields = ({type, name, validations}) => 
-  `{...fields('${type}', '${name}'${validations ? `, ${validations}` : ''})}`
+  `{...fields('${type}', '${camelCase(name)}'${validations ? `, ${validations}` : ''})}`
 
 const input = rows => ({ cols, type, name, label, validations}) => rows.push(`
   <Row className={classes.row}>
@@ -47,7 +48,7 @@ import { makeStyles, MenuItem } from '@material-ui/core'
 
 import { presence, validateNumber } from 'forms/validations'
 import DateInput from 'forms/DateInput'
-import Input from 'form/Input'
+import Input from 'forms/Input'
 
 import { Row, GridItem } from 'ui/grid'
 

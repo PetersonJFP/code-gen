@@ -4,7 +4,7 @@ import {camelCase, compact} from 'lodash'
 const fileBody = fields => {
   const needPrepare = compact(
     fields.map(field => { 
-      if (field.type !== 'text') {
+      if (field.type !== 'text' || (field.type === 'text' && field.subType === 'number')) {
         return field
       }
       return null
@@ -28,8 +28,11 @@ const fileBody = fields => {
       case 'date':
         return `formatDate(${camelCase(field.name)}, 'YYYY-MM-DD')`
 
-      case 'number':
-        return `${camelCase(field.name)} ? parseFloat(${camelCase(field.name)}) : null,`
+      case 'text':
+        if (field.subType === 'number') {
+          return `${camelCase(field.name)} ? parseFloat(${camelCase(field.name)}) : null`
+        }
+        return field.name
   
       default:
         return field.name

@@ -283,6 +283,7 @@ const fields = [
     inputType: 'text',
     cols: 'xs={12} sm={6}',
     type: 'text',
+    subType: 'number',
     name: 'ring-quality-control-final-ring-price',
     label: 'Final ring price',
     validations: '[presence()]',
