@@ -52,12 +52,6 @@ import Input from 'forms/Input'
 
 import { Row, GridItem } from 'ui/grid'
 
-const useStyles = makeStyles(theme => ({
-  row: {
-    marginBottom: theme.spacing(1),
-  },
-}))
-
 const Fields = ({ fields }) => {
   const classes = useStyles()
 
@@ -67,6 +61,12 @@ const Fields = ({ fields }) => {
     </React.Fragment>
   )
 }
+
+const useStyles = makeStyles(theme => ({
+  row: {
+    marginBottom: theme.spacing(1),
+  },
+}))
 
 Fields.displayName = 'Fields'
 

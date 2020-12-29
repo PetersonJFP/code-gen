@@ -14,21 +14,6 @@ import requiredFields from './requiredFields'
 import preparePayload from './preparePayload'
 import Fields from './Fields'
 
-
-const useStyles = makeStyles(theme => ({
-  title: {
-    marginBottom: theme.spacing(5),
-  },
-  formWrapper: {
-    padding: theme.spacing(4, 2),
-  },
-  button: {
-    display: 'block',
-    width: '40%',
-    margin: 'auto',
-  },
-}))
-
 const Form = ({ saveError, saving, onSubmit, initialValues }) => {
   const classes = useStyles()
 
@@ -64,6 +49,20 @@ const Form = ({ saveError, saving, onSubmit, initialValues }) => {
     </div>
   )
 }
+
+const useStyles = makeStyles(theme => ({
+  title: {
+    marginBottom: theme.spacing(5),
+  },
+  formWrapper: {
+    padding: theme.spacing(4, 2),
+  },
+  button: {
+    display: 'block',
+    width: '40%',
+    margin: 'auto',
+  },
+}))
 
 Form.displayName = '${capitalize(resource.name)}Form'
 

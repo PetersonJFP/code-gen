@@ -2,8 +2,14 @@
 
 [x] criar getInitialValues conforme mesmo exemplo
 
-[ ] numbers e qualquer dado que não seja string precisam ser parseados no getInitialValues para string e no preparePayload para seu formato original para não terem problemas com incompatibilidades --- hj somente dados com type !== text recebe um prepare payload, pensar e implementar uma forma de criar um input type text com subtype number para que ele possa ser tratado de forma diferente
+[x] datas precisam ser parseados no getInitialValues para obj do moment
 
-[ ] datas precisam ser parseados no getInitialValues para obj do moment
+[x] hj somente dados com type !== text recebe um prepare payload, pensar e implementar uma forma de criar um input type text com subtype number para que ele possa ser tratado de forma diferente em alguns lugares, mas mantendo o que ja funciona hoje
 
-[ ] testes no preparePayload e getInitialProps considerando string, date e number
+[x] numbers e qualquer dado que não seja string precisam ser parseados no getInitialValues para string e no preparePayload para seu formato original para não terem problemas com incompatibilidades
+
+[x] testes no preparePayload considerando string, date e number
+
+[x] mover estilos para baixo nos arquivos
+
+[ ] testes no getInitialProps considerando string, date e number

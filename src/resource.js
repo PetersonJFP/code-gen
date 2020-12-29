@@ -1,11 +1,17 @@
+// ##############################
+// ##### number, simple text [string]
+// ##############################
 // {
 //   inputType: 'text',
 //   cols: 'xs={12}',
 //   type: 'text',
-//   name: 'phone',
-//   label: 'Phone',
+//   name: 'name',
+//   label: 'Your name',
 //   validations: '[presence()]',
 // },
+// ##############################
+// ##### date field [datepicker]
+// ##############################
 // {
 //   inputType: 'date',
 //   cols: 'xs={12} sm={6}',
@@ -14,6 +20,9 @@
 //   label: 'First Kiss',
 //   validations: '[presence()]',
 // },
+// ##############################
+// ##### simple select
+// ##############################
 // {
 //   inputType: 'select',
 //   cols: 'xs={12} sm={6}',
@@ -26,6 +35,18 @@
 //     { label: 'CB', value: 'cushion_brilliant' },
 //     { label: 'CMB', value: 'cushion_modified_brilliant' }
 //   ]
+// },
+// ##############################
+// ##### number, decimal, monetary, etc
+// ##############################
+// {
+//   inputType: 'text',
+//   cols: 'xs={12} sm={6}',
+//   type: 'text',
+//   subType: 'number',
+//   name: 'ring-quality-control-final-ring-price',
+//   label: 'Final ring price',
+//   validations: '[presence()]',
 // },
 
 const fields = [
