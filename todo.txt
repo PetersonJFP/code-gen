@@ -13,3 +13,5 @@
 [x] mover estilos para baixo nos arquivos
 
 [ ] testes no getInitialProps considerando string, date e number
+
+[ ] add suporte ao tipo checkbox, basear-so no form TCC-web/src/admin/curations/edit/shipRing
